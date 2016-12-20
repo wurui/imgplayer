@@ -1,20 +1,38 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="demo.xsl"?>
 <root>
-  <env>
-    <domain>local</domain>
-  </env>
-  <data>
+    <env>
+        <domain>local</domain>
+    </env>
+    <data>
         <imgplayer>
-        <i>
-            <src>
-                //0.openxsl.com/img/fox.jpg
-            </src>
-            <text>
-                wallet
-            </text>
-        </i>
-    </imgplayer>
-  </data>
+            <i>
+                <src>
+                    asset/test.png
+                </src>
+                <text>
+                    1.3adfafdasfasdfasf
+                </text>
+            </i>
+            <i>
+                <src>
+                    asset/test3.jpg
+                </src>
+                <text><![CDATA[
+                    <p class="text" style="text-indent:2em;">
+                        <span style="color:#E53333;">中共中央总书记、国家主席、中央军委主席<span style="font-size:24px;">习近平</span></span>29日上午前往古巴驻华使馆，吊唁古巴革命领袖<u>菲德尔·卡斯特罗</u>逝世。<a href="http://www.qq.com/?pref=article" target="_blank" id="backqqcom"><img src="http://www.qq.com/favicon.ico" width="16" height="16" /><span style="font-size:14px;">返回腾讯网首页&gt;&gt;</span></a>
+                    </p>
+                ]]></text>
+            </i>
+            <i>
+                <src>
+                    asset/test2.png
+                </src>
+                <text>
+                    wallet
+                </text>
+            </i>
+        </imgplayer>
+    </data>
 
 </root>
