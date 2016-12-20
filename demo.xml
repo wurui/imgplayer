@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="demo.xsl"?>
+<root>
+  <env>
+    <domain>local</domain>
+  </env>
+  <data>
+        <imgplayer>
+        <i>
+            <src>
+                //0.openxsl.com/img/fox.jpg
+            </src>
+            <text>
+                wallet
+            </text>
+        </i>
+    </imgplayer>
+  </data>
+
+</root>

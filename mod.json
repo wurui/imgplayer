@@ -1,0 +1,6 @@
+{
+  "name": "imgplayer",
+  "version": "1.0.0",
+  "apiDependencies": ["imgplayer"]
+}
+
