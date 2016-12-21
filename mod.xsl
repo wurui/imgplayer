@@ -16,7 +16,6 @@
                     <xsl:value-of select="$imgs[position()=1]/text"/>
                 </div>
             </div>
-
             <xsl:for-each select="$imgs">
                 <input type="hidden" class="J_data" name="src" value="{normalize-space(src)}" />
                 <input type="hidden" class="J_data" name="text" value="{text}" />
