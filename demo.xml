@@ -29,7 +29,39 @@
                     asset/test2.png
                 </src>
                 <text>
-                    wallet
+                   3 wallet
+                </text>
+            </i>
+            <i>
+                <src>
+                    http://oss.openxsl.com/uploads/git/wurui/img/0a819470-bb9e-11e6-a392-1bbc6b56f0c0.jpg
+                </src>
+                <text>
+                   4 Liuyan
+                </text>
+            </i>
+            <i>
+                <src>
+                    http://oss.openxsl.com/uploads/git/wurui/img/07483b60-bb9e-11e6-a392-1bbc6b56f0c0.jpg
+                </src>
+                <text>
+                   5 wallet
+                </text>
+            </i>
+            <i>
+                <src>
+                    http://oss.openxsl.com/uploads/git/wurui/img/fb5f5f90-bb9d-11e6-a392-1bbc6b56f0c0.jpg
+                </src>
+                <text>
+                   6 wallet
+                </text>
+            </i>
+            <i>
+                <src>
+                    http://oss.openxsl.com/uploads/git/wurui/img/ff133fd0-bb9d-11e6-a392-1bbc6b56f0c0.jpg
+                </src>
+                <text>
+                   7 wallet
                 </text>
             </i>
         </imgplayer>

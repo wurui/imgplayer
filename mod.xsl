@@ -3,10 +3,10 @@
     <xsl:template match="/root" name="wurui.imgplayer">
         <!-- className 'J_OXMod' required  -->
         <xsl:variable name="imgs" select="data/imgplayer/i"/>
-        <div class="J_OXMod oxmod-imgplayer" data-src="asset/test.png" data-index="1" ox-mod="imgplayer">
+        <div class="J_OXMod oxmod-imgplayer" data-count="{count($imgs)}" data-index="1" ox-mod="imgplayer">
             <div class="img-box J_box">
-                <xsl:for-each select="$imgs">
-                    <span data-text="{text}" style="background-image:url({src})" class="img-item">
+                <xsl:for-each select="$imgs[position() &lt;= 2]">
+                    <span style="background-image:url({normalize-space(src)})" class="img-item">
                     </span>
                 </xsl:for-each>
             </div>
@@ -16,6 +16,11 @@
                     <xsl:value-of select="$imgs[position()=1]/text"/>
                 </div>
             </div>
+
+            <xsl:for-each select="$imgs">
+                <input type="hidden" class="J_data" name="src" value="{normalize-space(src)}" />
+                <input type="hidden" class="J_data" name="text" value="{text}" />
+            </xsl:for-each>
         </div>
     </xsl:template>
 

@@ -1,6 +1,6 @@
 .oxmod-imgplayer {
   /* CSS */
-  counter-reset: imgitem;
+  //counter-reset: imgitem;
   height: 100%;
   width: 100%;
   background-color: #000;
@@ -11,7 +11,7 @@
       display: none;
     }
     &:after{
-      content: attr(data-index) '/' counter(imgitem);;
+      content: attr(data-index) '/' attr(data-count);
       position: absolute;
       width:100%;
       color:#fff;
@@ -36,7 +36,8 @@
     background-position: center center;
     background-size:contain;
     //counter-reset: imgitem;
-    counter-increment: imgitem;
+    //counter-increment: imgitem;
+
 
   }
   .img-desc{
@@ -50,7 +51,7 @@
     position: absolute;
     width:100%;
     height:100%;
-    margin-top:-40%;
+    margin-top:-30%;
   }
   .desc-text{
     border-right:solid 1px #999;
