@@ -16,7 +16,8 @@ define([], function () {
             delta=Math.abs(delta)<1?(delta>0?1:-1):delta;
 //console.log(delta,box.scrollLeft,left)
             box.scrollLeft+=delta;
-            setTimeout(function () {
+            if(scrollto.TO)clearTimeout(scrollto.TO);
+            scrollto.TO=setTimeout(function () {
                 scrollto(box, left,fn);
             },16)
         }else{
@@ -39,6 +40,21 @@ define([], function () {
 
         })
         //box.scrollLeft=index * width;
+    };
+    var turnPage=function(el,direction,fn){
+
+
+        var width=el.clientWidth,
+            scrollLeft=el.scrollLeft,
+            index=direction>0?Math.ceil(scrollLeft/width):Math.floor(scrollLeft/width),
+            aimScrollLeft=width * index;
+
+        scrollto(el,aimScrollLeft,function(){
+            fn({
+                index:index
+            })
+
+        })
     };
 
     return {
@@ -63,7 +79,7 @@ define([], function () {
                     dataIndex=Data.startIndex+scrollIndex;
 
                 if($mod.attr('data-index')==dataIndex+1){
-                    return custom_scrolling=false;//do nothing
+                    return false;//do nothing
                 }
                // console.log('ddds')
 
@@ -104,7 +120,7 @@ define([], function () {
                     }
 
                 }
-                custom_scrolling=false;
+                //custom_scrolling=false;
 
             };
             //console.log(Data)
@@ -114,25 +130,44 @@ define([], function () {
 
 
             var touchOnDesc=false;
+
+            var lastTouchParam=null;
             var $box=$mod.find('.J_box').on('tap', function (e) {
                 //console.log('sd')
                 $mod.toggleClass('fullscreen')
-            }).on('swipe', function (e) {
+            }).on('touchstart touchend touchcancel', function (e) {
                 //var type= e.type;
-                //console.log('swipe', e);
+                //console.log('swipe', e.type);
+                    switch (e.type){
+                        case 'touchstart':
+                            lastTouchParam={
+                                startX: e.changedTouches[0].clientX,
+                                startTS:Date.now()
+                            };
+                            break
+                        case 'touchend':
+                        case 'touchcancel':
 
-
-            }).on('scroll',function(){
-                if(!custom_scrolling) {
-                    if (TO_Scroll) {
-                        clearTimeout(TO_Scroll)
+                            lastTouchParam.endX=e.changedTouches[0].clientX;
+                            lastTouchParam.endTS=Date.now();
+                            break
                     }
 
-                    TO_Scroll = setTimeout(function () {
-                        custom_scrolling=true;
-                        checkScroll($box[0], reloadScroll);
-                    }, 100);
+
+            }).on('swipeLeft swipeRight',function(e){
+                e.preventDefault();
+
+                if(lastTouchParam){
+                    var speed=(lastTouchParam.endX-lastTouchParam.startX)/(lastTouchParam.endTS-lastTouchParam.startTS);
                 }
+                if(speed && Math.abs(speed)>0.15){
+                    //attract($container,onScrollEnd)
+                    turnPage($box[0],e.type == 'swipeLeft' ? 1 : -1,reloadScroll)
+                }else {
+                    //turnPage($container, e.type == 'swipeLeft' ? 1 : -1,onScrollEnd);
+                    checkScroll($box[0], reloadScroll);
+                }
+
             }),
             $desc=$mod.find('.J_desc').on('touchstart',function(e){
                 touchOnDesc={
@@ -143,6 +178,7 @@ define([], function () {
                 return false;
 
             });
+
             $mod.on('touchmove',function(e){
                 if(touchOnDesc){
                     var delta=Math.max(minDescY,Math.min(0,e.touches[0].clientY-touchOnDesc.startY+touchOnDesc.lastDelta));
