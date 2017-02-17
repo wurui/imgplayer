@@ -91,6 +91,7 @@ define([], function () {
                     transform:'translate(0,0)'
                 }).data('delta',0).find('.J_desc_text').html(desc);
                 $desc.find('.J_desc_index').html(dataIndex+1);
+                $box.removeAttr('data-fade')
 
                 /**
                  * reset data-index
@@ -185,7 +186,8 @@ define([], function () {
 
                     $desc.css({
                         transform:'translate(0,'+delta+'px)'
-                    }).data('delta',delta)
+                    }).data('delta',delta);
+                    $box.attr('data-fade',delta?1:0);
                 }
             }).on('touchend touchcancel',function(e){
                 if(touchOnDesc){

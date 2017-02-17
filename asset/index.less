@@ -27,6 +27,10 @@
     white-space: nowrap;
     overflow-x: scroll;
     font-size:0;
+    transition: opacity .3s;
+    &[data-fade="1"]{
+      opacity: .5;
+    }
   }
   .img-item{
     display: inline-block;
