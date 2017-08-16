@@ -7,17 +7,13 @@
     <data>
         <imgplayer>
             <i>
-                <src>
-                    asset/test.png
-                </src>
+                <src>http://i.oxm1.cc/uploads/git/wurui/img/2agij73tsTj2ttuhw0R13syA7l4b-750.jpg</src>
                 <text>
                     1.3adfafdasfasdfasf
                 </text>
             </i>
             <i>
-                <src>
-                    asset/test3.jpg
-                </src>
+                <src>http://i.oxm1.cc/uploads/git/wurui/img/2ajj230djTiztaylc9R2k8rGoeu.jpg</src>
                 <text><![CDATA[
                     <p class="text" style="text-indent:2em;">
                         <span style="color:#E53333;">中共中央总书记、国家主席、中央军委主席<span style="font-size:24px;">习近平</span></span>29日上午前往古巴驻华使馆，吊唁古巴革命领袖<u>菲德尔·卡斯特罗</u>逝世。<a href="http://www.qq.com/?pref=article" target="_blank" id="backqqcom"><img src="http://www.qq.com/favicon.ico" width="16" height="16" /><span style="font-size:14px;">返回腾讯网首页&gt;&gt;</span></a>
@@ -25,43 +21,9 @@
                 ]]></text>
             </i>
             <i>
-                <src>
-                    asset/test2.png
-                </src>
+                <src>http://i.oxm1.cc/uploads/git/wurui/img/2ajsrqjg3Tizjlb29pRrigwA1l1e.jpg</src>
                 <text>
                    3 wallet
-                </text>
-            </i>
-            <i>
-                <src>
-                    http://oss.openxsl.com/uploads/git/wurui/img/0a819470-bb9e-11e6-a392-1bbc6b56f0c0.jpg
-                </src>
-                <text>
-                   4 Liuyan
-                </text>
-            </i>
-            <i>
-                <src>
-                    http://oss.openxsl.com/uploads/git/wurui/img/07483b60-bb9e-11e6-a392-1bbc6b56f0c0.jpg
-                </src>
-                <text>
-                   5 wallet
-                </text>
-            </i>
-            <i>
-                <src>
-                    http://oss.openxsl.com/uploads/git/wurui/img/fb5f5f90-bb9d-11e6-a392-1bbc6b56f0c0.jpg
-                </src>
-                <text>
-                   6 wallet
-                </text>
-            </i>
-            <i>
-                <src>
-                    http://oss.openxsl.com/uploads/git/wurui/img/ff133fd0-bb9d-11e6-a392-1bbc6b56f0c0.jpg
-                </src>
-                <text>
-                   7 wallet
                 </text>
             </i>
         </imgplayer>
