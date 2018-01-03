@@ -2,7 +2,7 @@
 
     <xsl:template match="/root" name="wurui.imgplayer">
         <!-- className 'J_OXMod' required  -->
-        <xsl:variable name="imgs" select="data/imgplayer/i"/>
+        <xsl:variable name="imgs" select="data/news/i[1]/imgs/i"/>
         <div class="J_OXMod oxmod-imgplayer" data-count="{count($imgs)}" data-index="1" ox-mod="imgplayer">
             <div class="img-box J_box">
                 <xsl:for-each select="$imgs[position() &lt;= 2]">
